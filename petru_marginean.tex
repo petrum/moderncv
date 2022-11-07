@@ -1,0 +1,150 @@
+\documentclass[8pt,a4paper,sans]{moderncv}
+\usepackage{verbatim}
+\moderncvstyle{classic}
+%\moderncvstyle{banking}
+%\moderncvstyle{casual}
+%\moderncvstyle{fancy}
+%\moderncvstyle{oldstyle}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.8]{geometry}
+
+\firstname{Petru}
+\familyname{Marginean}
+\address{16 Ridgecrest East}{Scarsdale, NY 10583}
+\mobile{(914)365-0326}
+\email{petru.marginean@gmail.com}
+\homepage{github.com/petrum}  
+
+\begin{document}
+\maketitle
+\section{Profile}
+\cvlistitem{Expert C++ developer with +20 years of experience}
+\cvlistitem{Petru started coding as a teenager on a ZX Spectrum clone in 1985.
+  He discovered the assembler language on the Z80 processor,
+  and then he taught himself coding using Pascal, and the C language.
+  In 1992 he was programming using C++ on IBM PC.
+  Upon graduating college he got a job programming financial applications using FoxPro.
+  In 1995 he started using C++ profesionally at a Romanian-American startup company writing Windows applications using COM/OLE.
+  In 1998 Petru moved to the US, and continued writing applications using C++ for top US companies.
+  In 2002 he transitioned to Linux environment helping Bear Stearns to port their C++ risk system from Sun Solaris to Linux.
+  He continued to work full-time for different investment banks until 2011 when he switched to the buy side.}
+\cvlistitem{Experience with building execution systems for trading Equity, Futures, and Options}
+\cvlistitem{Proficient in Python/Pandas, Perl, Q/kdb+, Sybase/SQL, Excel/VBA, Java, PHP, C\#}
+\cvlistitem{Worked in the financial industry for +14 years}
+\cvlistitem{Coding standards, logging, error handling and testing are very much addressed because of their importance
+  (please see below articles that cover these important aspects of programming)}
+
+\section{Publications}
+
+\cventry{Nov 2009}{Logging in C++ Part 2}{Dr. Dobb's Journal}{}{C++ article}
+        {\textit{Each individual logging statement can be conveniently turned on and off without the need
+            to recompile or even stop and restart the application}}
+
+\cventry{Jul 2008}{Lock-Free Queues}{Dr. Dobb's Journal}{}{C++ article}
+        {\textit{I present a lock-free queue in which one thread can write to the queue and another read from it
+            at the same time without any locking}}
+
+\cventry{Sep 2007}{Logging in C++ Part 1}{Dr. Dobb's Journal}{}{C++ article}
+        {\textit{Logging is a critical technique for troubleshooting and maintaining software systems.
+            Petru presents a C++ logging framework that is type-safe, thread-safe, and portable}}
+
+\cventry{Jun 2003}{Generic<Programming>: Enforcements}{Dr. Dobb's Journal}{in co-authorship with Andrei Alexandrescu}
+        {C++ article}
+        {\textit{You gotta love writing error-handling code - you know, all the joy of testing conventions and
+            formatting strings and throwing exceptions and... This is no joke. After you read "Enforcements"
+            maybe you'll agree: error handling can be fun. The inimitable duo of ScopeGuard fame hits again,
+            this time to take the boredom away from error-handling code}}
+ 
+\cventry{Dec 2000}{Generic<Programming>: Change the Way You Write Exception-Safe Code; Forever}{Dr. Dobb's Journal}
+        {C++ article}{in co-authorship with Andrei Alexandrescu}
+        {\textit{Let's face it: writing exception-safe code is hard. But it just got a lot easier with this amazing template}}
+
+\cventry{Feb 1999}{Communication Between Browsers Using RMI}{Dr. Dobb's Journal}
+        {Java article}{}
+        {\textit{Remote method invocation can help offset some of the limitations on Java applets imposed in the name of security.}}
+
+\section{US Working Experience}
+
+\cventry{Aug 2011- Today}{IT Director, Execution Services}{Laurion Capital Management}{New York City}{}
+        {The main developer of the C++ execution system used for trading for Equities, Futures by more than +20 traders. 
+          Designed, implemented, and supports very low latency execution system using Redline API (Inrush + EG).
+          Developed from scratch option execution system, and risk monitor using the SpiderRock SRSE interface (Python/Pandas).
+          Developed from scratch C\# order monitor, and a C++ order entry using QT library.
+          Also designed and developed STP system (Perl) that retrieves real-time executions from
+          different execution brokers (options, FX, equities, futures, SWAPS) and books them into the Imagine risk system.
+          Developed Perl modules for reconciliation broker files with Geneva accounting system.}
+
+\cventry {May 2007- Aug 2011}{VP Fixed Income}{Morgan Stanley}{New York City}{}
+         {Lead of development team for Interest Rates electronic trading system (Virtual Markets).
+           The VirtualMarkets (VM) allows traders to trade over multiple markets (Btec, Espeed, CME,
+           Govex, ELX, NyseLiffe, Eurex, Liffe) using a simple, and consistent interface. 
+           VM offers virtualization of the markets that have similar instruments (Cash OTR on BTEC/Espeed/Govex or
+           Futures on CME/ELX/NyseLiffe).
+           VM allows traders to create strategies (Switches, Packs, Index) for automatic trading.
+           VM displays different stats about the markets, such as Hi/Lo/Last, bucketed volumes, trade history,
+           participation (both MS and non-MS), volumes at price.
+           Responsible for extending VM for new markets, bug fixes, coordinating releases (economic events),
+           adding new features at the request of traders.
+           Designed and implemented C++ market data application supporting the Government, Agencies, and Mortgages
+           desks; low latency, high performance.
+           Extensive experience with Ion Trading C API (used to connect to the all markets).
+           Designed and implemented state-of-the-art logging system (see articles in Dr. Dobb's).
+           Designed and implemented highly efficient lock free queue (see article).
+           Designed and implemented Kdb+/Q ticker plant to replace existing Sybase server.
+           Created Perl tools for monitoring the application performance, error detection, automatic graph generation.}
+
+\cventry{Jun 2005- May 2007}{VP Equity Derivatives}{Banc of America Securities LLC}{New York City}{}
+        {Front-office developer for the ``Risk Engine'' team.
+          Redesigned and developed from scratch a high performance C++ application to calculate the prices for virtually
+          any security, including all the Greeks.
+          Worked very closely with Quants.
+          The application can also apply configurable scenarios (used to generates trader heat-maps, and VaR).
+          It used DataSynapse to distribute the intensive calculations. It also used gSOAP to retrieve the
+          input data in the XML format.
+          The Xerces library was used to parse the XML and extract the data (the code compiled/run on both Windows/Linux platforms)
+          Intensive use of the boost library (multi-threading, command-line options, smart pointers, tuples).
+          Petru's ScopeGuard was included in the boost library.
+          Extensive use of design patterns such as visitor, object factory, and singleton.
+          Responsible for the full cycle of the application, from design and coding to testing, deployment, and support.
+          Created a WTL GUI interface for the security pricer, for easier use on Windows.
+          Experience with the C++ services model of DataSynapse, gSOAP, Xerces libraries.
+          Rewrote the application that generates the P\&L with very much improving error handling,
+          readability of the code, and logging}
+
+\cventry{Nov 2002- June 2005}{Associate Director Equity Derivatives}{Bear Stearns}{New York City}{}
+        {Front-office developer for the ``Structured Equity Finance'' desk.
+          Lead development of a new system to price and manage the risk of barrier options, total return swaps,
+          pass-through certificates (and plan to extend it to include principal-protected notes, loans and warrants)
+          on the baskets of hedge funds or fund of funds.
+          The system verified the compliance with various guidelines and created many client reports using Crystal Reports.
+          Designed generic panels in C\# using the Syncfusion datagrid.
+          Support for CFD (Contract for Differences), and Swap products.
+          Developed various Excel spreadsheets (VBA) to assist the traders with different calculations.}
+
+\cventry{Jun 2001- Nov 2002}{C++ Senior developer}{ILX Systems}{New York City}{}
+        {Redesigned and implemented a complex ActiveX application that emulates a TN3270 terminal.
+          This terminal emulator is part of the ActiveILX, the new ILX workstation. ActiveILX's fully
+          customizable component workstation enables you to build a "workspace" that meets trader's needs. 
+          Intensively use of C++ language, STL, COM/ATL.}
+
+\cventry{Mar 1998- Jun 2001}{C++ senior developer}{Plural}{New York City}{}
+        {Dell Buys Services Company Plural.
+          Senior C++ developer with Java experience.
+          Designed, developed and tested COM C++ components (using C++, STL, ATL, ORACLE database, ASP).
+          The framework used for developing a Java client-server application became the subject of a Java article
+          published in Dr. Dobb's (see above).}
+
+\section{Education and Formal Training}
+\cventry{2006}{Derivative Mathematics certificate}{New York Institute of Finance}{New York City}{}{}
+\cventry{1998}{Microsoft Certified Solution Developer}{online exam}{}{renewed in 2001}{}
+\cventry{1989-1994}{BS in Electrical Engineering}{University Politehnica of Bucharest}{Major in Computer Systems}{}{}
+
+\section{Personal Projects}
+\cvlanguage{sshremote}{Android app}{It helps execute remote SSH commands by pressing a button on your smartphone}
+\cvlanguage{WeatherTicker}{Raspberry Pi}{It continously displays the local weather and the weather forecast}
+\cvlanguage{Ding}{Raspberry Pi}{Using SDR and reverse engineering you hack your wireless door bell and you control it from
+  your smartphone}
+\cvlanguage{Motion}{Raspberry Pi}{It detects motion using a PIR sensor and it sends you a notification email}
+        
+\end{document}
